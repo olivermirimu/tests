@@ -1,0 +1,10 @@
+main {
+  display: block;
+  --video-width: 100%;
+}
+
+video,
+.photo {
+  width: var(--video-width);
+  height: calc((var(--video-width)) *0.5);
+}

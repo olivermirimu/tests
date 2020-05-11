@@ -16,15 +16,13 @@ const photo = document.getElementById('photo');
 
 let localStream;
 let recording = false;
-facingMode = 'user';
+// facingMode = 'user';
 
 // GLOBAL FUNCTIONS
 function switchCameras(track, camera) {
   // let constraints = track.getConstraints();
   // constraints.facingMode = camera;
   // track.applyConstraints(constraints);
-
-
 }
 // Error Handling
 function handleError(err) {
@@ -86,20 +84,20 @@ audioButton.addEventListener('click', () => {
 });
 
 // RECORDING FUNCTIONS
-const recordedVideo = document.getElementById('recordedVideo');
+// const recordedVideo = document.getElementById('recordedVideo');
 
-let mediaRecorder = new mediaRecorder(localStream);
-let RecordedChunks = [];
+// let mediaRecorder = new mediaRecorder(localStream);
+// let RecordedChunks = [];
 
-mediaRecorder.ondataavailable = (event) => {
-  recordedChunks.push(event.data);
-};
-mediaRecorder.onstop = (event) => {
-  let recordedBlob = new Blob(recordedChunks, {
-    'type': 'video/mp4'
-  });
-  recordedVideo.srcObject = recordedBlob;
-};
+// mediaRecorder.ondataavailable = (event) => {
+//   recordedChunks.push(event.data);
+// };
+// mediaRecorder.onstop = (event) => {
+//   let recordedBlob = new Blob(recordedChunks, {
+//     'type': 'video/mp4'
+//   });
+//   recordedVideo.srcObject = recordedBlob;
+// };
 
 // PHOTO FUNCTIONS
 start.addEventListener('click', () => {
